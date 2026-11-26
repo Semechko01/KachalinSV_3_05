@@ -16,7 +16,7 @@ int main() {
 
     HANDLE sema = CreateSemaphoreA(NULL, maxInstances, maxInstances, name);
     if (sema == NULL) {
-        std::cout << "Ошибка создания семафора. Код: " << GetLastError() << std::endl;
+        std::cout << "Ошибка: " << GetLastError() << std::endl;
         return 1;
     }
     DWORD res = WaitForSingleObject(sema, 0);
