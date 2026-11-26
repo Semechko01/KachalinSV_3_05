@@ -11,8 +11,8 @@
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    LPCSTR name = "Local\\KachalinSV_3_05_";
-    const int maxInstances = 2;
+    LPCSTR name = "sema";
+    int maxInstances = 2;
 
     HANDLE sema = CreateSemaphoreA(NULL, maxInstances, maxInstances, name);
     if (sema == NULL) {
